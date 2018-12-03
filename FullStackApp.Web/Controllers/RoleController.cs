@@ -19,7 +19,7 @@ namespace FullStackApp.Web.Controllers
             // GET: Role
             public ActionResult Index()
             {
-                var result = _userMgr.GetRoles();
+                var result = _userMgr.GetRoles().Result;
                 return View(result);
             }
             public ActionResult CreateRole()

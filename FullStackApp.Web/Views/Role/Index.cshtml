@@ -1,4 +1,4 @@
-﻿@model FullStackApp.Core.Business.RoleModel
+﻿@model IEnumerable<FullStackApp.Core.Business.RoleModel>
 @{
     ViewBag.Title = "Index";
 }
@@ -23,14 +23,14 @@
             Role Name
         </th>
     </tr>
-    @foreach (var item in Model.Name)
+    @*@foreach (var item in Model.Name)
     {
         <tr>
             <td class="c">
                 @item
             </td>
         </tr>
-    }
+    }*@
 
 </table>
 

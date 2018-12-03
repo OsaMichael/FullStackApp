@@ -132,6 +132,10 @@
     <Compile Include="Migrations\201812031314017_initial.Designer.cs">
       <DependentUpon>201812031314017_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812031443497_addedRoleModel.cs" />
+    <Compile Include="Migrations\201812031443497_addedRoleModel.Designer.cs">
+      <DependentUpon>201812031443497_addedRoleModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -142,6 +146,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812031314017_initial.resx">
       <DependentUpon>201812031314017_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812031443497_addedRoleModel.resx">
+      <DependentUpon>201812031443497_addedRoleModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

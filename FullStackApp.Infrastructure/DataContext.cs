@@ -17,6 +17,8 @@ namespace FullStackApp.Infrastructure
         public DbSet<User> Users { get; set; }
         public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<Role> Roles { get; set; }
+
 
         //public static DataContext Create()
         //{
