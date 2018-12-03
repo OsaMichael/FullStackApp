@@ -1,0 +1,114 @@
+﻿@model FullStackApp.Core.Business.EmployeeModel
+@{
+    ViewBag.Title = "CreateEmployee";
+}
+
+<h2>CreateEmployee</h2>
+
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<div class="card-body" id="bar-parent">
+    <form action="CreateEmployee" method="Post" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <div class="form-body">
+
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    FirstName
+                </label>
+
+                <div class="col-md-12">
+                    @*@Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "enter new item" } })*@
+                    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = "enter new item" })
+
+                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                    @*@Html.TextBox("CustomarName", null, new { @class = "form-control", @placeholder = "Search With Customar Name" })*@
+                    @*@Html.TextBoxFor(m => m.Listing.Location.AddressLine1, new { @placeholder = "Address Line 1 - Required" })*@
+                </div>
+
+
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    LastName
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    Department
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    Position
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.Position, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    DateEmployed
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.DateEmployed, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.DateEmployed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                    Address
+                </label>
+
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @*<div class="form-group row" id="radioButtonDiv">
+                <label class="control-label col-md-3">
+                    Alert Expired
+                    @*<span class="required" aria-required="true"> * </span>*@
+            @*</label>
+                    <div class="col-md-12">
+                        <select id="alertExpired" name="AlertExpired" class="form-control">
+                            <option value="">Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>*@
+
+            <div class="form-actions">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6 pull-right">
+                        <button type="submit" class="btn btn-info" id="submitData">Save</button>
+                        @*<button type="button" class="btn btn-danger">Cancel</button>*@
+
+                    </div>
+                    <div class="col-md-1">
+                        <a href="@Url.Action("Index","Employee", new { area = ""})" class="btn btn-chatpane">Back To List(s)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
