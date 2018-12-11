@@ -30,9 +30,9 @@ namespace FullStackApp.Core.Business
         {
             return new User()
             {
-                Password = Password,
-                Email = Email,
-                Name = Name
+                Password = model.Password,
+                Email = model.Email,
+                Name = model.Name
                 // ConfirmPassword =  ConfirmPassword
 
 
@@ -40,7 +40,8 @@ namespace FullStackApp.Core.Business
         }
         public User Edit(User entity, UserModel model)
         {
-            //entity.UserName = model.UserName;      
+            //entity.UserName = model.UserName;  
+            entity.UserId = model.UserId;    
             entity.Email = model.Email;
             entity.Password = model.Password;
             entity.Name = model.Name;

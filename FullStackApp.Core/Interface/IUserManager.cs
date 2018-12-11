@@ -24,7 +24,7 @@ namespace FullStackApp.Core.Interface
         Operation<RoleModel> GetRoleById(int roleId);
         Operation<RoleModel> UpdateRole(RoleModel model);
         Operation<RoleModel[]> GetRoles(int userId);
-        Operation<UserModel> AssignRole(int userId, string roleName);
+        void AssignRole(int userId, int roleId);
         Operation<RoleModel> RemoveRoleFromUser(int userId, string roleName);
         Operation<bool> HasRole(string email, string roleName);
         Operation<RoleModel[]> GetUserRoleByUserId(int userId);

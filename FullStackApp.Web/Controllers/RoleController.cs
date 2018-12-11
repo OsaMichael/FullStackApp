@@ -30,14 +30,19 @@ namespace FullStackApp.Web.Controllers
             [HttpPost]
             public ActionResult CreateRole(RoleModel model)
             {
+            if(ModelState.IsValid)
+            {
                 var roles = _userMgr.CreateRole(model);
                 if (roles.Succeeded)
                 {
                     TempData["message"] = $" Employee{ model.RoleId} was successfully added";
                     return RedirectToAction("Index");
+
+                    //ModelState.AddModelError(string.Empty, roles.Message);
+                    //ViewBag.Error = $"Error occured : {roles.Message}";
                 }
-                ModelState.AddModelError(string.Empty, roles.Message);
-                ViewBag.Error = $"Error occured : {roles.Message}";
+            }
+         
                 return View(model);
 
             }

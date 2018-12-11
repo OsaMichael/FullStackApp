@@ -1,7 +1,42 @@
-﻿
+﻿@model FullStackApp.Core.Business.RoleModel
 @{
     ViewBag.Title = "CreateRole";
 }
 
 <h2>CreateRole</h2>
+<div class="card-body" id="bar-parent">
+    <form action="CreateRole" method="Post" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <div class="form-body">
+
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                   Role Name
+                </label>
+
+                <div class="col-md-12">
+                    @*@Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "enter new item" } })*@
+                    @Html.TextBoxFor(model => model.RoleName, new { @class = "form-control", @placeholder = "enter new item" })
+
+                    @Html.ValidationMessageFor(m => m.RoleName, "", new { @class = "text-danger" })
+                    @*@Html.TextBox("CustomarName", null, new { @class = "form-control", @placeholder = "Search With Customar Name" })*@
+                    @*@Html.TextBoxFor(m => m.Listing.Location.AddressLine1, new { @placeholder = "Address Line 1 - Required" })*@
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6 pull-right">
+                        <button type="submit" class="btn btn-info" id="submitData">Save</button>
+                        @*<button type="button" class="btn btn-danger">Cancel</button>*@
+
+                    </div>
+                    <div class="col-md-1">
+                        <a href="@Url.Action("Index","Role", new { area = ""})" class="btn btn-chatpane">Back To List(s)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
 

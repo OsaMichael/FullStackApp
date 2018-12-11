@@ -1,3 +1,4 @@
+c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\obj\Debug\FullStackApp.Core.csprojResolveAssemblyReference.cache
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\FullStackApp.Core.dll.config
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\FullStackApp.Core.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\FullStackApp.Core.pdb
@@ -37,6 +38,5 @@ c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\Ninject.Web.Common.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\Ninject.Web.Common.OwinHost.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\bin\Debug\Ninject.Web.Common.WebHost.xml
-c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\obj\Debug\FullStackApp.Core.csprojResolveAssemblyReference.cache
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\obj\Debug\FullStackApp.Core.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Core\obj\Debug\FullStackApp.Core.pdb

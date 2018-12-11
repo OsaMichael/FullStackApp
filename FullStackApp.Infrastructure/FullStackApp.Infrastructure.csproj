@@ -136,6 +136,42 @@
     <Compile Include="Migrations\201812031443497_addedRoleModel.Designer.cs">
       <DependentUpon>201812031443497_addedRoleModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812040738002_Adduseridtorole.cs" />
+    <Compile Include="Migrations\201812040738002_Adduseridtorole.Designer.cs">
+      <DependentUpon>201812040738002_Adduseridtorole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041353392_AdduseridtoroleToEmployee.cs" />
+    <Compile Include="Migrations\201812041353392_AdduseridtoroleToEmployee.Designer.cs">
+      <DependentUpon>201812041353392_AdduseridtoroleToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041506546_AdduseridToEmployee.cs" />
+    <Compile Include="Migrations\201812041506546_AdduseridToEmployee.Designer.cs">
+      <DependentUpon>201812041506546_AdduseridToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812050740104_AddnAMEtOeMPL.cs" />
+    <Compile Include="Migrations\201812050740104_AddnAMEtOeMPL.Designer.cs">
+      <DependentUpon>201812050740104_AddnAMEtOeMPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812050908044_addRolename.cs" />
+    <Compile Include="Migrations\201812050908044_addRolename.Designer.cs">
+      <DependentUpon>201812050908044_addRolename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111102520_addup.cs" />
+    <Compile Include="Migrations\201812111102520_addup.Designer.cs">
+      <DependentUpon>201812111102520_addup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111120203_addup1.cs" />
+    <Compile Include="Migrations\201812111120203_addup1.Designer.cs">
+      <DependentUpon>201812111120203_addup1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111203360_adduff.cs" />
+    <Compile Include="Migrations\201812111203360_adduff.Designer.cs">
+      <DependentUpon>201812111203360_adduff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111221001_adduss.cs" />
+    <Compile Include="Migrations\201812111221001_adduss.Designer.cs">
+      <DependentUpon>201812111221001_adduss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -149,6 +185,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812031443497_addedRoleModel.resx">
       <DependentUpon>201812031443497_addedRoleModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812040738002_Adduseridtorole.resx">
+      <DependentUpon>201812040738002_Adduseridtorole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041353392_AdduseridtoroleToEmployee.resx">
+      <DependentUpon>201812041353392_AdduseridtoroleToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041506546_AdduseridToEmployee.resx">
+      <DependentUpon>201812041506546_AdduseridToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812050740104_AddnAMEtOeMPL.resx">
+      <DependentUpon>201812050740104_AddnAMEtOeMPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812050908044_addRolename.resx">
+      <DependentUpon>201812050908044_addRolename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111102520_addup.resx">
+      <DependentUpon>201812111102520_addup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111120203_addup1.resx">
+      <DependentUpon>201812111120203_addup1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111203360_adduff.resx">
+      <DependentUpon>201812111203360_adduff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111221001_adduss.resx">
+      <DependentUpon>201812111221001_adduss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

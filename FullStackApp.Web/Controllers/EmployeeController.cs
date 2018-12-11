@@ -12,10 +12,12 @@ namespace FullStackApp.Web.Controllers
     public class EmployeeController : Controller
     {
 
+        private IUserManager _userMgr;
         private IEmployeeManager _empMgr;
-        public EmployeeController(IEmployeeManager empMgr)
+        public EmployeeController(IEmployeeManager empMgr, IUserManager userMgr)
         {
             _empMgr = empMgr;
+            _userMgr = userMgr;
         }
         // GET: Employee
         public ActionResult Index()
@@ -36,15 +38,19 @@ namespace FullStackApp.Web.Controllers
             }
 
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult CreateEmployee()
         {
+            ViewBag.Name = new SelectList(_userMgr.GetRoles().Result, "RoleId", "RoleName");
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult CreateEmployee(EmployeeModel model)
         {
-            model.CreatedBy = User.Identity.GetUserName();
+            ViewBag.Name = new SelectList(_userMgr.GetRoles().Result, "RoleId", "RoleName");
+            //model.CreatedBy = User.Identity.GetUserName();
             var result = _empMgr.CreateEmployee(model);
             if (result.Succeeded == true)
             {
@@ -66,6 +72,7 @@ namespace FullStackApp.Web.Controllers
             ModelState.AddModelError(string.Empty, result.Message);
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult EditEmployee(EmployeeModel model)
         {

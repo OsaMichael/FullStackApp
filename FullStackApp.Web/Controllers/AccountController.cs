@@ -101,12 +101,12 @@ namespace FullStackApp.Web.Controllers
 
                 if (result.Succeeded)
                 {
-                    TempData["message"] = $" Employee{ model.Email} was successfully added";
+                    TempData["message"] = " Employee{ model.Email} was successfully added";
                     return RedirectToAction("Login");
                 }
 
                 ModelState.AddModelError(string.Empty, result.Message);
-                ViewBag.Error = $"Error occured : {result.Message}";
+                ViewBag.Error = "Error occured : {result.Message}";
                 return View(model);
             }
             return View(model);
@@ -117,25 +117,21 @@ namespace FullStackApp.Web.Controllers
         [HttpGet]
         public ActionResult RegisterRole()
         {
-            ViewBag.Name = new SelectList(_userMgr.GetRoles().Result, "Name", "Name");
-            ViewBag.UserName = new SelectList(_userMgr.GetUsers().Result, "Name", "Name");
+            ViewBag.Name = new SelectList(_userMgr.GetRoles().Result, "RoleId", "RoleName");
+            ViewBag.UserName = new SelectList(_userMgr.GetUsers().Result, "UserId", "Email");
             return View();
         }
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult RegisterRole(UserModel model)// we ougth to have both registermodel and usermodel here but i have both in the same class
+        //since i m passing only two values of the usres// if i have more than two values i can pass it using model or creating a model for it
+        public ActionResult RegisterRole(int userId, int roleId)
         {
-            //DataContext context = new DataContext();
-            var userId = _userMgr.GetUsers().Result.Where(i => i.Name == model.Name).Select(s => s.UserId);
-            string updateId = "";
-            foreach (var i in userId)
-            {
-                updateId = i.ToString();
-            }
-            //asign role to user here
-            // here i have to convert the string back to int
-            _userMgr.AssignRole(int.Parse(updateId), model.Name);
+       
+            ViewBag.Name = new SelectList(_userMgr.GetRoles().Result, "RoleId", "RoleName");
+            ViewBag.UserName = new SelectList(_userMgr.GetUsers().Result, "UserId", "Email");
+
+           _userMgr.AssignRole(userId,roleId);
             return RedirectToAction("Index", "Home");
         }
         public ActionResult LogOff()

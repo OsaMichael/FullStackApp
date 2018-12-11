@@ -4,7 +4,7 @@
 }
 
 <h2>CreateEmployee</h2>
-
+ 
 <h1></h1>
 <h1></h1>
 <h1></h1>
@@ -12,17 +12,15 @@
     <form action="CreateEmployee" method="Post" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
         <div class="form-body">
-
             <div class="form-group row">
                 <label class="control-label col-md-3">
-                    FirstName
+                    Name
                 </label>
-
                 <div class="col-md-12">
                     @*@Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "enter new item" } })*@
-                    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = "enter new item" })
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "enter new item" })
 
-                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
                     @*@Html.TextBox("CustomarName", null, new { @class = "form-control", @placeholder = "Search With Customar Name" })*@
                     @*@Html.TextBoxFor(m => m.Listing.Location.AddressLine1, new { @placeholder = "Address Line 1 - Required" })*@
                 </div>
@@ -32,22 +30,12 @@
 
             <div class="form-group row">
                 <label class="control-label col-md-3">
-                    LastName
-                    @*<span class="required" aria-required="true"> * </span>*@
-                </label>
-                <div class="col-md-12">
-                    @Html.TextBoxFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="control-label col-md-3">
                     Department
                     @*<span class="required" aria-required="true"> * </span>*@
                 </label>
                 <div class="col-md-12">
-                    @Html.TextBoxFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Department, new { @class = "form-control", @placeholder = "enter new department" })
+                    @Html.ValidationMessageFor(m => m.Department, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -57,7 +45,7 @@
                     @*<span class="required" aria-required="true"> * </span>*@
                 </label>
                 <div class="col-md-12">
-                    @Html.TextBoxFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.TextBoxFor(model => model.Position, new { @class = "form-control", @placeholder = "enter new position" })
                     @Html.ValidationMessageFor(m => m.Position, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -68,7 +56,7 @@
                     @*<span class="required" aria-required="true"> * </span>*@
                 </label>
                 <div class="col-md-12">
-                    @Html.TextBoxFor(model => model.DateEmployed, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.TextBoxFor(model => model.DateEmployed, new { @class = "form-control", @placeholder = "enter new employment date" })
                     @Html.ValidationMessageFor(m => m.DateEmployed, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -76,11 +64,39 @@
                 <label class="control-label col-md-3">
                     Address
                 </label>
-
                 <div class="col-md-12">
-                    @Html.TextBoxFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder = "enter new address" })
                     @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
                 </div>
+            </div><div class="form-group row">
+    <label class="control-label col-md-3">
+        NextOfSkin
+    </label>
+    <div class="col-md-12">
+        @Html.TextBoxFor(model => model.NextOfSkin, new { @class = "form-control", @placeholder = "enter new address" })
+        @Html.ValidationMessageFor(m => m.NextOfSkin, "", new { @class = "text-danger" })
+    </div>
+</div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">
+                     Date of birth
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    <input type="date" name="DateOfBirth" class="form-control" value="dd/MM/yyyy" />
+                    @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">
+                    Select Role
+                    @*<span class="required" aria-required="true"> * </span>*@
+                </label>
+                <div class="col-md-12">
+                    @Html.DropDownListFor(m => m.RoleId, (IEnumerable<SelectListItem>)ViewBag.Name, new { @class = "form-control", @placeholder = "select role" })
+                    @Html.ValidationMessageFor(m => m.RoleId, "", new { @class = "text-danger" })
+                </div>
+
             </div>
             @*<div class="form-group row" id="radioButtonDiv">
                 <label class="control-label col-md-3">

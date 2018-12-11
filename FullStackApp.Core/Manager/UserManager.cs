@@ -161,7 +161,9 @@ namespace FullStackApp.Core.Manager
         {
             return Operation.Create(() =>
             {
-                var roleEntity = _db.Query<Role>().Where(r => r.Name == model.Name).FirstOrDefault();
+                
+                var roleEntity = _db.Query<Role>().Where(r => r.RoleName == model.RoleName).FirstOrDefault();
+                if (roleEntity != null) throw new Exception("role already exist");
                 var entity = model.CreateRole(model);
                 _db.Add(entity);
                 var result = _db.SaveChanges();
@@ -221,33 +223,35 @@ namespace FullStackApp.Core.Manager
                 return models;
             });
         }
-        public Operation<UserModel> AssignRole(int userId, string roleName)
+       //since i m passing only two values of the usres ids or otherwise string if its names// 
+       //if i have more than two values i can pass it using model or creating a model for it
+        public void AssignRole(int userId, int roleId)
         {
-            return Operation.Create(() =>
+            //return Operation.Create(() =>
+            //{
+            //    var role = _db.Query<Role>().FirstOrDefault(r => r.RoleName == roleName);
+            //    if (role == null) throw new Exception("Invalid Role");
+
+            //    var user = _db.Query<User>().FirstOrDefault(u => u.UserId == userId);
+            //    if (user == null) throw new Exception("Invalid User ID");
+
+            //    var userroles = _db.Query<UserRole>(ur => ur.Role, ur => ur.User).Where(ur => ur.UserId == userId).ToList();
+
+            //    var userRoleExists = userroles.Select(r => r.RoleId).Contains(role.RoleId);
+
+            //    if (userRoleExists) throw new Exception($"User already has role: {role.RoleName}");
+
+            //var assignRole = AssignRole(userId, role.Name);
+            var user = new UserRole
             {
-                var role = _db.Query<Role>().FirstOrDefault(r => r.Name == roleName);
-                if (role == null) throw new Exception("Invalid Role");
+                UserId = userId,
+                RoleId = roleId,
+            };
 
-                var user = _db.Query<User>().FirstOrDefault(u => u.UserId == userId);
-                if (user == null) throw new Exception("Invalid User ID");
-
-                var userroles = _db.Query<UserRole>(ur => ur.Role, ur => ur.User).Where(ur => ur.UserId == userId).ToList();
-
-                var userRoleExists = userroles.Select(r => r.RoleId).Contains(role.RoleId);
-
-                if (userRoleExists) throw new Exception($"User already has role: {role.Name}");
-
-                //var assignRole = AssignRole(userId, role.Name);
-                _db.Add(new UserRole
-                {
-                    UserId = user.UserId,
-                    RoleId = role.RoleId,
-                });
-                _db.SaveChanges().Throw();
-
-                return new UserModel(user);
-
-            });
+            _db.Add(user);
+            _db.SaveChanges().Throw();
+           
+           // });
         }
 
         public Operation<RoleModel> RemoveRoleFromUser(int userId, string roleName)
@@ -260,7 +264,7 @@ namespace FullStackApp.Core.Manager
                      .ToArray();
 
                 //Get Role to delete
-                var usrrole = userRoles.Where(ur => string.Equals(ur.Role.Name, roleName, StringComparison.OrdinalIgnoreCase))
+                var usrrole = userRoles.Where(ur => string.Equals(ur.Role.RoleName, roleName, StringComparison.OrdinalIgnoreCase))
                                  .FirstOrDefault();
 
 
@@ -279,7 +283,7 @@ namespace FullStackApp.Core.Manager
             {
                 return _db.Query<UserRole>(_ur => _ur.Role, _ur => _ur.User)
                       .Where(ur => ur.User.Email == email)
-                      .Where(ur => ur.Role.Name == roleName)
+                      .Where(ur => ur.Role.RoleName == roleName)
                       .Any();
             });
         }

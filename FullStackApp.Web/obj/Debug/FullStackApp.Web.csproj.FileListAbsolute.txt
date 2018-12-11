@@ -1,3 +1,4 @@
+c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\obj\Debug\FullStackApp.Web.csprojResolveAssemblyReference.cache
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\ApplicationInsights.config
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\roslyn\csc.exe
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -52,7 +53,7 @@ c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Ninject.Web.Common.WebHost.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Operation.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Owin.dll
-c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\React.Core.dll
+c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\React.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Helpers.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Mvc.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Optimization.dll
@@ -96,7 +97,7 @@ c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Ninject.Web.Common.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Ninject.Web.Common.OwinHost.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\Ninject.Web.Common.WebHost.xml
-c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\React.Core.xml
+c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\React.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Optimization.xml
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Optimization.Less.pdb
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\System.Web.Optimization.Less.xml
@@ -113,6 +114,5 @@ c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\ru-ru\JavaScriptEngineSwitcher.Vroom.resources.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\bin\ru-ru\MsieJavaScriptEngine.resources.dll
-c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\obj\Debug\FullStackApp.Web.csprojResolveAssemblyReference.cache
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\obj\Debug\FullStackApp.Web.dll
 c:\users\michael\documents\visual studio 2015\Projects\FullStackApp\FullStackApp.Web\obj\Debug\FullStackApp.Web.pdb

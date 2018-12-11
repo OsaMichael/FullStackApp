@@ -5,12 +5,57 @@
 
 <h2>@ViewBag.Title</h2>
 
+
+
+
 @using (Html.BeginForm("RegisterRole", "Account", FormMethod.Post, new { @class = "form-control" }))
 {
     @Html.AntiForgeryToken()
     <h4>Create a new account</h4>
     <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
+ 
+
+    <div class="card-body" id="bar-parent">
+        <form action="RegisterRole" method="Post" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="form-body">
+                <div class="form-group">
+                    <label class="control-label col-md-3">
+                        Select Role
+                        @*<span class="required" aria-required="true"> * </span>*@
+                    </label>
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(m => m.RoleId, (IEnumerable<SelectListItem>)ViewBag.Name, new { @class = "form-control input-height" })
+                        @Html.ValidationMessageFor(m => m.RoleId, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">
+                        Select Users
+                        @*<span class="required" aria-required="true"> * </span>*@
+                    </label>
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(m => m.UserId, (IEnumerable<SelectListItem>)ViewBag.UserName, new { @class = "form-control input-height" })
+                        @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-default" value="Register" />
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+}
+
+@*@Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.Label("Select Role", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
@@ -20,10 +65,13 @@
 
     //Select the role type for the user
     <div class="form-group">
-        @Html.Label("Select User", new { @class = "col-md-2 control-label" })
+        <label class="control-label col-md-3">
+            Select Role
+            @*<span class="required" aria-required="true"> * </span>*@
+@*</label>
         <div class="col-md-10">
-            @Html.DropDownList("Name")
-
+            @Html.DropDownListFor(m => m.Name, (IEnumerable<SelectListItem>)ViewBag.Name, new { @class = "form-control input-height" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
         </div>
 
     </div>
@@ -33,6 +81,4 @@
 
         </div>
 
-    </div>
-}
-
+    </div>*@

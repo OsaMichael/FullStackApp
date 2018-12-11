@@ -22,7 +22,7 @@ namespace FullStackApp.Core.Manager
         {
             return Operation.Create(() =>
             {
-                var isExist = _db.Query<Employee>().Where(e => e.EmployeeId == model.EmployeeId);
+                var isExist = _db.Query<Employee>().Where(e => e.Name == model.Name).FirstOrDefault();
                 if (isExist != null) throw new Exception("employee already exist");
 
                 var entity = model.Create(model);
